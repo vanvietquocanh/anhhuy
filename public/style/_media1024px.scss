@@ -1,0 +1,129 @@
+@media screen and (min-width: 1024px) {
+	body{
+		header{
+			#icon-1,#icon-2,#login{
+				.line1024{
+					line-height: 3em; 
+				}
+			}
+		}
+		#background-1{
+			background-size: 145%;
+			min-height: auto;
+			#opacity{
+				#box{
+					#box-content{
+						#box-sub{
+							h1{
+								padding:1em 3em;
+							}
+							.padding{
+								padding: .5em 1em;
+							}
+						}
+						div{
+							button{
+								i{
+									font-size: 20px;
+								}
+							}
+						}
+					}
+				}
+				#opacity-nav{
+					ul{
+						li{
+							.subcus{
+								left: -5.3em;
+							}
+						}
+					}
+				}
+				#opacity-nav-2{
+					display: flex;
+					#box{
+						width: 50%;
+						margin: 8em 0 4em 2em; 
+					}
+					#slogan{
+						width: 50%;
+						padding-left: 3em;  
+						margin: 14em 2em 0em 0em;
+						h1{
+							word-spacing: .4em; 
+						}
+					}
+				}
+			}
+		}
+		#slogan-2{
+			background-size: 230%;
+		}
+		#tour{
+			div{
+				width: 33.33%;
+			}
+		}
+		#services{
+			padding-bottom: 8em; 
+			display: flex;
+			flex-wrap: wrap;
+			.services-head{
+				width: 100%;
+			}
+			.services-content{
+				width: 68%; 
+				.inline{
+					div{
+						h4{
+							padding-bottom: 1em; 
+						}
+						p{
+							line-height: 1.5em; 
+							padding-right: 0; 
+						}
+					}
+				}
+			}
+			#img{
+				padding: 0; 
+				margin: 0;
+				img{
+					width: 75%;
+				} 
+			}
+		}
+		footer{
+			display: flex;
+			padding: 70px 0px 60px 0;
+			div{
+				padding: 1em 1em;
+				img{
+					padding-top: 0;
+					padding: 4.5em 0;  
+				}
+			}
+			.footer-cus{
+				width: 40%;
+			} 
+		}
+		nav{
+			display: flex;
+			padding-bottom: 1.5em; 
+			#coppy-right{
+				width: 50%;
+				h6{
+					text-align: left;
+				}
+			}
+			#icon-bottom{
+				margin-right: 3em;
+				padding: 0; 
+				ul{
+					padding-left: 2em; 
+					line-height: 6em; 
+				} 
+			}
+		}
+	}
+}

@@ -1,0 +1,238 @@
+$yelow: #ffc926;
+@media screen and (min-width: 768px) {
+	body{
+		header{
+			display: flex;
+			#icon-1{
+				.icon-1-cs{
+					line-height: 2.3em; 
+				}
+			}
+			#icon-2{
+				line-height: 2.3em; 
+				padding: 0; 
+				#icon-2-f{
+					border-left: 1px solid #444; 
+				}
+			}
+			#login{
+				line-height: 2.3em; 
+				#cus-3{
+					border-left: 1px solid #444;
+				}
+			}
+		}
+		#background-1{
+			background-size:155%;
+			text-outline: -380px;
+			#opacity{
+				#opacity-nav{
+	 				background:rgba(255, 255, 255, 0) ;
+					border-bottom: 1px solid rgba(255, 255, 255, .3) ;
+					ul{
+						display: block;
+						width: 100%;
+						li{
+							text-align: center;
+							position: relative;
+							&:hover .sub-1{
+									display: block;
+								}
+							a{
+								display: block;
+								line-height: 8.7em; 
+								font-size: 12px;
+								border-bottom: 3px solid rgba(255, 255, 255, 0) ;
+								&:hover,&:focus{
+									border-bottom: 3px solid $yelow;
+								}
+							}
+							div{
+								position: absolute;
+								top:6.75em;
+								display: none;
+								transition: .5s;
+								left: 0; 
+								background-color: #222;
+								z-index: 20;  
+								.sub-menu{
+									padding: 1em 1em 0em 1em; 
+									li{
+										width: 160px;
+										border-bottom: 1px solid #333;
+										padding: 10px 0;
+										a{
+											color: #888; 
+											border: 1px solid  rgba(255, 255, 255, 0) ; 
+											line-height: 1em;
+											&:hover,
+											&:focus{
+												color: $yelow; 
+												border: 1px solid  rgba(255, 255, 255, 0) ; 
+											}
+										}
+									}
+								}
+								.pribottom{
+									li{
+										border-bottom: none;
+										cursor: default;
+									}
+								}
+								.pri{
+									padding-top: 2em;
+									li{
+										color: #888; 
+										font-weight: 600;
+										cursor: default;
+									}
+								}
+								.pri-2{
+									li{
+										color: #888; 
+										font-weight: 600;
+									}
+								}
+							}
+							.subcus{
+								left: -7.6em; 
+							}
+						}
+					}
+					#logo-image{
+						width: auto; 
+						padding: 1.5em;
+					}
+					#menubar{
+						display: none;
+					}
+					#logo-image{
+					}
+				}
+				#box{
+					#box-content{
+						div{
+							button{
+								i{
+									font-size: 28px;
+									line-height: 28px; 
+								}
+							}
+						}
+						#box-sub{
+							ul{
+								width: 100%; 
+								i{
+									right: 45px;
+								}
+							}
+							.nonemargin{
+								margin: 0;
+							}
+							.w50{
+								width: 50%;
+							}
+							.padding2{
+								padding: 1.5em 1em; 
+							}
+						}
+					}
+				}
+				#slogan{
+					.tag-cus{
+						font-size: 45px;
+						font-weight: normal;
+						padding-bottom: .5em;
+					}
+					.tag-cus-2{
+						font-size: 15px;
+					}
+					ul{
+						text-align: left;
+						padding-bottom: 6em; 
+					}
+				}
+			}
+		}
+		#slogan-2{
+			background-size:  300%;
+		}
+		#tour{
+			h1{
+				width: 100%;
+			}
+			div{
+				width: 50%;
+			}
+		}
+		#client-logo{
+			margin-top: 3em;
+			ul{
+				width: 33.33%;
+			}
+		}
+		#slide{
+			width: 100%;
+			overflow: hidden;
+			.slide-block{
+				position: relative;
+				transition:1s;
+				.slide-container{
+					float: left;
+				}
+			}
+		}
+		#services{
+			.mg{
+				margin-top: 3em; 
+			}
+			.inline{
+				display: flex;
+			}
+			.auto{
+				width: 80%;
+			}
+			#img{
+				padding-top: 4em; 
+			}
+		}
+		#opa-2{
+			p{
+				line-height: 1.75em; 
+				width: 87%;  
+			}
+		}
+		#newsUpdate{
+			display: flex;
+			flex-wrap: wrap;
+			h1{
+				width: 100%;
+			}
+			div{
+				margin:0 auto; 
+				width: 45%;
+				ul{
+					img{
+						height: 100%; 
+					}
+				}
+			}
+		}
+		#sale{
+			div{
+				display: flex;
+				div{
+					width: 50%;
+					display: flex;
+					flex-wrap: wrap ;
+					ul{
+						width: 100%;
+					}
+				}
+			}
+			.norepon{
+				display: block;
+			}
+		}
+	}
+}

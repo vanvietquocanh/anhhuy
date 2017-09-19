@@ -1,0 +1,1030 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: #fff; }
+
+body {
+  overflow-x: hidden;
+  position: relative; }
+  body header {
+    position: relative;
+    z-index: 11;
+    background-color: #222222; }
+    body header #icon-1 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      max-width: 350px;
+      margin: auto;
+      width: 100%; }
+      body header #icon-1 ul {
+        border-right: 1px solid #444;
+        width: 33.33%;
+        text-align: center; }
+        body header #icon-1 ul li a {
+          font-size: 12px; }
+          body header #icon-1 ul li a i {
+            padding-right: 4px;
+            font-size: 14px;
+            color: #ffc926; }
+        body header #icon-1 ul:hover, body header #icon-1 ul:focus {
+          background-color: #444; }
+      body header #icon-1 #grow {
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        border: none; }
+    body header #icon-2 {
+      max-width: 320px;
+      padding: 2em 0;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      width: 100%; }
+      body header #icon-2 ul {
+        border-right: 1px solid #444;
+        width: 20%;
+        text-align: center; }
+        body header #icon-2 ul li a {
+          display: block; }
+        body header #icon-2 ul:hover, body header #icon-2 ul:focus {
+          background-color: #444; }
+      body header #icon-2 #cus-2 {
+        border: none; }
+    body header #login {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      width: 100%; }
+      body header #login #cus-3 {
+        width: 50%;
+        border-right: 1px solid #444; }
+      body header #login ul {
+        text-align: center; }
+        body header #login ul li a {
+          display: block;
+          font-size: 12px; }
+  body #background-1 {
+    background: url(../images/parallax_04.jpg) no-repeat center center;
+    background-size: 363%;
+    background-position-x: 50%;
+    background-attachment: fixed;
+    width: 100%;
+    padding-bottom: 3em; }
+    body #background-1 #opacity {
+      width: 100%;
+      position: relative; }
+      body #background-1 #opacity #opacity-nav {
+        width: 100%;
+        background-color: #222222;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex; }
+        body #background-1 #opacity #opacity-nav ul {
+          display: none; }
+        body #background-1 #opacity #opacity-nav #logo-image {
+          width: 100%;
+          padding: 3em 0;
+          display: block; }
+        body #background-1 #opacity #opacity-nav #menubar {
+          display: block;
+          font-size: 30px; }
+          body #background-1 #opacity #opacity-nav #menubar a i {
+            color: #444;
+            padding: 2em 1em; }
+      body #background-1 #opacity #box {
+        z-index: 10;
+        margin: 7em auto 6em;
+        width: 90%; }
+        body #background-1 #opacity #box #box-content {
+          width: 100%; }
+          body #background-1 #opacity #box #box-content div {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; }
+            body #background-1 #opacity #box #box-content div button {
+              width: 20%;
+              background: #eeebeb;
+              background: rgba(238, 235, 235, 0.9);
+              border: none;
+              border-bottom: 1px solid #fff;
+              padding: 1.7em 1em; }
+              body #background-1 #opacity #box #box-content div button i {
+                color: #444;
+                font-size: 15px; }
+              body #background-1 #opacity #box #box-content div button:hover, body #background-1 #opacity #box #box-content div button:focus {
+                border-bottom: 1px solid #ffc926;
+                background: #ffc926; }
+                body #background-1 #opacity #box #box-content div button:hover i, body #background-1 #opacity #box #box-content div button:focus i {
+                  color: #fff; }
+          body #background-1 #opacity #box #box-content #box-sub {
+            text-align: center;
+            width: 100%;
+            background: #eeebeb;
+            background: rgba(238, 235, 235, 0.8); }
+            body #background-1 #opacity #box #box-content #box-sub h1 {
+              text-align: left;
+              word-spacing: .15em;
+              letter-spacing: .1em;
+              color: #444;
+              font-size: 15px;
+              margin: auto;
+              font-weight: 600;
+              padding: 3.2em 2em; }
+            body #background-1 #opacity #box #box-content #box-sub .Err {
+              color: red; }
+            body #background-1 #opacity #box #box-content #box-sub ul {
+              position: relative;
+              width: 80%;
+              margin: auto;
+              padding-bottom: 1em; }
+              body #background-1 #opacity #box #box-content #box-sub ul input {
+                cursor: pointer;
+                width: 100%;
+                height: 3.5em;
+                padding: 1em 3em 1em 1em;
+                color: #888;
+                font-size: 15px;
+                border: 1px solid rgba(238, 235, 235, 0.8);
+                border-bottom: 1px solid #ffc926;
+                background: #fff; }
+                body #background-1 #opacity #box #box-content #box-sub ul input:hover, body #background-1 #opacity #box #box-content #box-sub ul input:focus {
+                  border: 1px solid #ffc926; }
+                body #background-1 #opacity #box #box-content #box-sub ul input::-webkit-input-placeholder {
+                  color: #888; }
+                body #background-1 #opacity #box #box-content #box-sub ul input:-ms-input-placeholder {
+                  color: #888; }
+                body #background-1 #opacity #box #box-content #box-sub ul input::placeholder {
+                  color: #888; }
+              body #background-1 #opacity #box #box-content #box-sub ul .replace::-webkit-input-placeholder {
+                color: red; }
+              body #background-1 #opacity #box #box-content #box-sub ul .replace:-ms-input-placeholder {
+                color: red; }
+              body #background-1 #opacity #box #box-content #box-sub ul .replace::placeholder {
+                color: red; }
+              body #background-1 #opacity #box #box-content #box-sub ul i {
+                position: absolute;
+                color: #ffc926;
+                line-height: 3.5em;
+                right: 10px; }
+              body #background-1 #opacity #box #box-content #box-sub ul button {
+                width: 100%;
+                height: 3.5em;
+                padding: 1em 1em;
+                background: #ffc926;
+                font-size: 15px;
+                font-weight: 500;
+                border: none;
+                margin-bottom: 3em; }
+                body #background-1 #opacity #box #box-content #box-sub ul button:hover, body #background-1 #opacity #box #box-content #box-sub ul button:focus {
+                  background: #444; }
+                body #background-1 #opacity #box #box-content #box-sub ul button i {
+                  position: static;
+                  line-height: 1em;
+                  padding-right: .5em;
+                  color: #FFF;
+                  font-size: 25px; }
+              body #background-1 #opacity #box #box-content #box-sub ul .formbox {
+                display: none;
+                position: absolute;
+                padding: 0 1em;
+                right: 0;
+                -webkit-transition: .25s;
+                transition: .25s;
+                z-index: 100; }
+                body #background-1 #opacity #box #box-content #box-sub ul .formbox .sub-box {
+                  padding: 0; }
+                  body #background-1 #opacity #box #box-content #box-sub ul .formbox .sub-box li {
+                    -webkit-transition: .3s;
+                    transition: .3s;
+                    cursor: pointer;
+                    padding: 1em 0;
+                    border-bottom: 1px solid #fff;
+                    display: block;
+                    background-color: #222;
+                    -webkit-user-select: none;
+                       -moz-user-select: none;
+                        -ms-user-select: none;
+                            user-select: none; }
+                    body #background-1 #opacity #box #box-content #box-sub ul .formbox .sub-box li:hover {
+                      color: #ffc926;
+                      border-bottom: 1px solid #ffc926; }
+      body #background-1 #opacity #slogan {
+        z-index: 10;
+        width: 90%;
+        margin: auto;
+        padding: 0 1.8em; }
+        body #background-1 #opacity #slogan h1 {
+          padding-bottom: 1em;
+          font-size: 28px;
+          font-weight: 100; }
+        body #background-1 #opacity #slogan p {
+          font-weight: 100;
+          line-height: 1.7em;
+          padding-bottom: 3em; }
+        body #background-1 #opacity #slogan ul {
+          max-width: 200px; }
+          body #background-1 #opacity #slogan ul a {
+            border-radius: 15em;
+            padding: 1em 3em;
+            background-color: #ffc926;
+            color: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; }
+            body #background-1 #opacity #slogan ul a:hover, body #background-1 #opacity #slogan ul a:focus {
+              background: #444; }
+  body #client-logo {
+    width: 100%;
+    position: relative;
+    margin-top: 12em;
+    background: #f6f6f6;
+    padding: 3.5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    body #client-logo ul {
+      width: 50%;
+      padding: 0 1em; }
+      body #client-logo ul img {
+        width: 100%; }
+  body #tour {
+    width: 100%;
+    position: relative;
+    background: #fff;
+    padding: 5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    body #tour h1 {
+      font-weight: 100;
+      color: #444;
+      font-size: 20px;
+      line-height: 1.2em;
+      letter-spacing: .15em;
+      word-spacing: .3em;
+      padding-left: 1em; }
+    body #tour div ul {
+      padding-top: 1em;
+      text-align: center; }
+      body #tour div ul img {
+        width: 90%; }
+    body #tour div .cus {
+      width: 90%;
+      line-height: 2em;
+      margin: auto;
+      margin-bottom: 1em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      body #tour div .cus h1 {
+        padding-left: 0;
+        font-size: 15px;
+        text-align: left;
+        width: 80%;
+        font-weight: 600; }
+      body #tour div .cus .price {
+        width: 20%;
+        text-align: right;
+        padding-right: 0; }
+      body #tour div .cus li i {
+        color: #ffc926; }
+      body #tour div .cus p {
+        text-align: left;
+        width: 100%;
+        color: #444444;
+        word-spacing: 1px;
+        font-size: 15px; }
+    body #tour .private {
+      margin-bottom: 4em; }
+  body #slogan-2 {
+    background: url(../images/parallax_03.jpg) no-repeat center center;
+    min-height: 300px;
+    max-height: 500px;
+    background-size: 800%;
+    background-attachment: fixed; }
+    body #slogan-2 div {
+      overflow: hidden;
+      display: -webkit-inline-box; }
+      body #slogan-2 div ul {
+        width: 100%;
+        text-align: center;
+        line-height: 3em;
+        -webkit-transition: .1s;
+        transition: .1s; }
+        body #slogan-2 div ul h1 {
+          color: #444;
+          font-size: 25px; }
+        body #slogan-2 div ul p {
+          color: #444;
+          font-size: 15px; }
+        body #slogan-2 div ul h2 {
+          color: #444;
+          font-size: 15px;
+          font-weight: 600; }
+    body #slogan-2 #checked {
+      width: 100%;
+      display: block;
+      text-align: center; }
+      body #slogan-2 #checked div input {
+        -webkit-transition: .3s;
+        transition: .3s;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        height: 12px;
+        width: 12px;
+        background-color: #444;
+        border-radius: 5em;
+        outline: none; }
+        body #slogan-2 #checked div input:checked, body #slogan-2 #checked div input:hover, body #slogan-2 #checked div input:focus {
+          background-color: #ffc926; }
+  body .slide {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: .25s;
+    transition: .25s; }
+    body .slide .slide-block {
+      position: relative; }
+      body .slide .slide-block .slide-container {
+        float: left; }
+        body .slide .slide-block .slide-container img {
+          -webkit-user-drag: none;
+          -moz-user-drag: none;
+          -ms-user-drag: none;
+          user-drag: none; }
+  body .container-btn {
+    width: 100%;
+    position: relative;
+    top: -50%; }
+    body .container-btn button {
+      position: absolute;
+      top: 50%;
+      background: rgba(250, 250, 250, 0);
+      z-index: 10;
+      border: none; }
+      body .container-btn button i {
+        color: #222;
+        font-size: 30px; }
+    body .container-btn #next {
+      right: 0; }
+  body #services {
+    position: relative;
+    background-color: #FFF; }
+    body #services h1 {
+      padding: 3em .5em 1em .5em;
+      color: #444;
+      font-weight: 500;
+      font-size: 24px; }
+    body #services hr {
+      width: 35px;
+      border-top: #fff;
+      border-left: #fff;
+      border-width: 2px;
+      margin-left: 1em;
+      border-color: #ffc926; }
+    body #services div {
+      margin-left: 1em; }
+      body #services div ul {
+        margin-left: .5em;
+        margin-top: 3em;
+        background-color: #ffc926;
+        width: 70px;
+        height: 70px;
+        border-radius: 15em;
+        text-align: center; }
+        body #services div ul i {
+          line-height: 70px;
+          font-size: 32px; }
+      body #services div h4 {
+        color: #444;
+        padding-left: 1em;
+        padding-right: 4.5em;
+        font-size: 18px;
+        font-weight: normal; }
+      body #services div p {
+        padding-left: 1.1em;
+        padding-right: 4.5em;
+        font-weight: 100;
+        font-size: 15px;
+        color: #666; }
+    body #services #img {
+      padding-bottom: 4em; }
+  body #sale {
+    position: relative;
+    text-align: center;
+    background-color: #f6f6f6;
+    padding-top: 6em; }
+    body #sale div {
+      padding-bottom: 15px; }
+      body #sale div h1 {
+        color: #444;
+        font-size: 24px;
+        word-spacing: .3em;
+        font-weight: 500;
+        padding-bottom: 1em; }
+      body #sale div p {
+        color: #666;
+        line-height: 2em;
+        padding: 0 1.5em;
+        font-weight: 100;
+        font-size: 15px; }
+    body #sale hr {
+      width: 35px;
+      border-top: #fff;
+      border-left: #fff;
+      border-width: 2px;
+      margin: 0 auto;
+      border-color: #ffc926; }
+    body #sale div {
+      padding-top: 1em; }
+      body #sale div div ul {
+        width: 100%;
+        text-align: center; }
+        body #sale div div ul img {
+          width: 90%;
+          -webkit-transition: 1s;
+          transition: 1s; }
+          body #sale div div ul img:hover, body #sale div div ul img:focus {
+            opacity: .8; }
+      body #sale div div .text {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        margin-top: 1.75em; }
+        body #sale div div .text a {
+          font-size: 18px;
+          color: #444; }
+          body #sale div div .text a:hover, body #sale div div .text a:focus {
+            color: #FFF;
+            background-color: #ffc926; }
+        body #sale div div .text h4 {
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1;
+          font-size: 18px;
+          font-weight: 500;
+          color: #444;
+          text-align: right; }
+          body #sale div div .text h4 span {
+            color: #ffc926; }
+          body #sale div div .text h4 .black {
+            color: #444; }
+        body #sale div div .text h3 {
+          padding: 1em 0;
+          text-align: left;
+          font-size: 15px;
+          font-weight: 600;
+          width: 100%;
+          color: #444; }
+          body #sale div div .text h3 i {
+            color: #ffc926; }
+        body #sale div div .text p {
+          text-align: left;
+          padding: 0;
+          padding-right: .5em; }
+    body #sale #hotel {
+      padding-top: 3.5em; }
+  body #opa-2 {
+    background: url(../images/parallax_05.jpg) no-repeat center center;
+    position: relative;
+    text-align: center;
+    background-attachment: fixed;
+    margin: 3em 0;
+    padding-bottom: 12em; }
+    body #opa-2 h1 {
+      width: 60%;
+      font-size: 28px;
+      margin: auto;
+      text-align: center;
+      font-weight: 100;
+      padding-top: 5.5em;
+      padding-bottom: 1em; }
+    body #opa-2 p {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 3em; }
+    body #opa-2 a {
+      padding: 1em 3em;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: #ffc926;
+      border-radius: 10em; }
+      body #opa-2 a:hover, body #opa-2 a:focus {
+        background-color: #444; }
+  body #newsUpdate {
+    margin-top: 12em;
+    position: relative;
+    padding: 0 1em;
+    padding-top: 5em;
+    background-color: #FFF; }
+    body #newsUpdate h1 {
+      color: #444;
+      font-size: 18px;
+      font-weight: 500;
+      padding-bottom: 2em; }
+    body #newsUpdate img {
+      width: 100%;
+      -webkit-transition: .3s;
+      transition: .3s; }
+      body #newsUpdate img:hover {
+        opacity: .8; }
+    body #newsUpdate ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      body #newsUpdate ul h5 {
+        padding: 1.2em 0;
+        width: 100%; }
+        body #newsUpdate ul h5 a {
+          -webkit-transition: .3s;
+          transition: .3s;
+          color: #444;
+          font-size: 18px;
+          font-weight: normal; }
+          body #newsUpdate ul h5 a:hover, body #newsUpdate ul h5 a:focus {
+            color: #FFF;
+            background-color: #ffc926; }
+      body #newsUpdate ul span {
+        padding-right: 20px;
+        color: #888888; }
+        body #newsUpdate ul span i {
+          color: #888888;
+          padding-right: 5px; }
+      body #newsUpdate ul p {
+        padding-top: 1em;
+        color: #666;
+        font-weight: 100;
+        font-size: 15px;
+        word-spacing: 2px;
+        line-height: 1.75em;
+        padding-bottom: 3em; }
+  body #map {
+    position: relative;
+    width: 100%; }
+  body footer {
+    margin-top: -4px;
+    background-color: #222;
+    position: relative;
+    padding: 0 1em;
+    padding-bottom: 4em; }
+    body footer div {
+      text-align: center; }
+      body footer div img {
+        padding-top: 8em; }
+      body footer div ul {
+        text-align: left; }
+        body footer div ul h1 {
+          line-height: 3.8em;
+          color: #aaaaaa;
+          font-size: 18px;
+          letter-spacing: 1.6px;
+          font-weight: normal; }
+        body footer div ul p {
+          color: #aaaaaa;
+          font-size: 15px;
+          line-height: 1.9em; }
+        body footer div ul input {
+          width: 100%;
+          max-width: 400px;
+          margin-top: 2em;
+          padding: 0 1.75em;
+          background-color: #222222;
+          border: 1px solid #aaaaaa;
+          border-radius: 15em;
+          height: 3.5em;
+          font-size: 15px;
+          color: #aaaaaa; }
+          body footer div ul input:focus {
+            border: 1px solid #ffc926; }
+          body footer div ul input::-webkit-input-placeholder {
+            text-align: center;
+            font-size: 18px; }
+          body footer div ul input:-ms-input-placeholder {
+            text-align: center;
+            font-size: 18px; }
+          body footer div ul input::placeholder {
+            text-align: center;
+            font-size: 18px; }
+        body footer div ul button {
+          background-color: #ffc926;
+          color: #FFF;
+          font-weight: 500;
+          font-size: 15px;
+          padding: 1em 2em;
+          border: none;
+          border-radius: 15em;
+          margin-top: 1em; }
+          body footer div ul button:hover, body footer div ul button:focus {
+            background-color: #444; }
+  body nav {
+    position: relative;
+    background-color: #111;
+    width: 100%; }
+    body nav #coppy-right h6 {
+      margin: auto;
+      width: 80%;
+      padding-top: 2em;
+      line-height: 2em;
+      color: #aaaaaa;
+      text-align: center;
+      font-size: 15px; }
+    body nav #icon-bottom {
+      max-width: 320px;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding-bottom: 2.5em; }
+      body nav #icon-bottom ul {
+        width: 11.11%;
+        text-align: center; }
+        body nav #icon-bottom ul a i {
+          color: #666;
+          -webkit-transition: .3s;
+          transition: .3s; }
+          body nav #icon-bottom ul a i:hover, body nav #icon-bottom ul a i:focus {
+            color: #fff; }
+
+@media screen and (min-width: 545px) {
+  body #background-1 {
+    background-size: 210%; }
+  body #slogan-2 {
+    background-size: 500%; } }
+@media screen and (min-width: 768px) {
+  body header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    body header #icon-1 .icon-1-cs {
+      line-height: 2.3em; }
+    body header #icon-2 {
+      line-height: 2.3em;
+      padding: 0; }
+      body header #icon-2 #icon-2-f {
+        border-left: 1px solid #444; }
+    body header #login {
+      line-height: 2.3em; }
+      body header #login #cus-3 {
+        border-left: 1px solid #444; }
+  body #background-1 {
+    background-size: 155%;
+    text-outline: -380px; }
+    body #background-1 #opacity #opacity-nav {
+      background: rgba(255, 255, 255, 0);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+      body #background-1 #opacity #opacity-nav ul {
+        display: block;
+        width: 100%; }
+        body #background-1 #opacity #opacity-nav ul li {
+          text-align: center;
+          position: relative; }
+          body #background-1 #opacity #opacity-nav ul li:hover .sub-1 {
+            display: block; }
+          body #background-1 #opacity #opacity-nav ul li a {
+            display: block;
+            line-height: 8.7em;
+            font-size: 12px;
+            border-bottom: 3px solid rgba(255, 255, 255, 0); }
+            body #background-1 #opacity #opacity-nav ul li a:hover, body #background-1 #opacity #opacity-nav ul li a:focus {
+              border-bottom: 3px solid #ffc926; }
+          body #background-1 #opacity #opacity-nav ul li div {
+            position: absolute;
+            top: 6.75em;
+            display: none;
+            -webkit-transition: .5s;
+            transition: .5s;
+            left: 0;
+            background-color: #222;
+            z-index: 20; }
+            body #background-1 #opacity #opacity-nav ul li div .sub-menu {
+              padding: 1em 1em 0em 1em; }
+              body #background-1 #opacity #opacity-nav ul li div .sub-menu li {
+                width: 160px;
+                border-bottom: 1px solid #333;
+                padding: 10px 0; }
+                body #background-1 #opacity #opacity-nav ul li div .sub-menu li a {
+                  color: #888;
+                  border: 1px solid rgba(255, 255, 255, 0);
+                  line-height: 1em; }
+                  body #background-1 #opacity #opacity-nav ul li div .sub-menu li a:hover, body #background-1 #opacity #opacity-nav ul li div .sub-menu li a:focus {
+                    color: #ffc926;
+                    border: 1px solid rgba(255, 255, 255, 0); }
+            body #background-1 #opacity #opacity-nav ul li div .pribottom li {
+              border-bottom: none;
+              cursor: default; }
+            body #background-1 #opacity #opacity-nav ul li div .pri {
+              padding-top: 2em; }
+              body #background-1 #opacity #opacity-nav ul li div .pri li {
+                color: #888;
+                font-weight: 600;
+                cursor: default; }
+            body #background-1 #opacity #opacity-nav ul li div .pri-2 li {
+              color: #888;
+              font-weight: 600; }
+          body #background-1 #opacity #opacity-nav ul li .subcus {
+            left: -7.6em; }
+      body #background-1 #opacity #opacity-nav #logo-image {
+        width: auto;
+        padding: 1.5em; }
+      body #background-1 #opacity #opacity-nav #menubar {
+        display: none; }
+    body #background-1 #opacity #box #box-content div button i {
+      font-size: 28px;
+      line-height: 28px; }
+    body #background-1 #opacity #box #box-content #box-sub ul {
+      width: 100%; }
+      body #background-1 #opacity #box #box-content #box-sub ul i {
+        right: 45px; }
+    body #background-1 #opacity #box #box-content #box-sub .nonemargin {
+      margin: 0; }
+    body #background-1 #opacity #box #box-content #box-sub .w50 {
+      width: 50%; }
+    body #background-1 #opacity #box #box-content #box-sub .padding2 {
+      padding: 1.5em 1em; }
+    body #background-1 #opacity #slogan .tag-cus {
+      font-size: 45px;
+      font-weight: normal;
+      padding-bottom: .5em; }
+    body #background-1 #opacity #slogan .tag-cus-2 {
+      font-size: 15px; }
+    body #background-1 #opacity #slogan ul {
+      text-align: left;
+      padding-bottom: 6em; }
+  body #slogan-2 {
+    background-size: 300%; }
+  body #tour h1 {
+    width: 100%; }
+  body #tour div {
+    width: 50%; }
+  body #client-logo {
+    margin-top: 3em; }
+    body #client-logo ul {
+      width: 33.33%; }
+  body #slide {
+    width: 100%;
+    overflow: hidden; }
+    body #slide .slide-block {
+      position: relative;
+      -webkit-transition: 1s;
+      transition: 1s; }
+      body #slide .slide-block .slide-container {
+        float: left; }
+  body #services .mg {
+    margin-top: 3em; }
+  body #services .inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  body #services .auto {
+    width: 80%; }
+  body #services #img {
+    padding-top: 4em; }
+  body #opa-2 p {
+    line-height: 1.75em;
+    width: 87%; }
+  body #newsUpdate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    body #newsUpdate h1 {
+      width: 100%; }
+    body #newsUpdate div {
+      margin: 0 auto;
+      width: 45%; }
+      body #newsUpdate div ul img {
+        height: 100%; }
+  body #sale div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    body #sale div div {
+      width: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      body #sale div div ul {
+        width: 100%; }
+  body #sale .norepon {
+    display: block; } }
+@media screen and (min-width: 1024px) {
+  body header #icon-1 .line1024, body header #icon-2 .line1024, body header #login .line1024 {
+    line-height: 3em; }
+  body #background-1 {
+    background-size: 145%;
+    min-height: auto; }
+    body #background-1 #opacity #box #box-content #box-sub h1 {
+      padding: 1em 3em; }
+    body #background-1 #opacity #box #box-content #box-sub .padding {
+      padding: .5em 1em; }
+    body #background-1 #opacity #box #box-content div button i {
+      font-size: 20px; }
+    body #background-1 #opacity #opacity-nav ul li .subcus {
+      left: -5.3em; }
+    body #background-1 #opacity #opacity-nav-2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      body #background-1 #opacity #opacity-nav-2 #box {
+        width: 50%;
+        margin: 8em 0 4em 2em; }
+      body #background-1 #opacity #opacity-nav-2 #slogan {
+        width: 50%;
+        padding-left: 3em;
+        margin: 14em 2em 0em 0em; }
+        body #background-1 #opacity #opacity-nav-2 #slogan h1 {
+          word-spacing: .4em; }
+  body #slogan-2 {
+    background-size: 230%; }
+  body #tour div {
+    width: 33.33%; }
+  body #services {
+    padding-bottom: 8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    body #services .services-head {
+      width: 100%; }
+    body #services .services-content {
+      width: 68%; }
+      body #services .services-content .inline div h4 {
+        padding-bottom: 1em; }
+      body #services .services-content .inline div p {
+        line-height: 1.5em;
+        padding-right: 0; }
+    body #services #img {
+      padding: 0;
+      margin: 0; }
+      body #services #img img {
+        width: 75%; }
+  body footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 70px 0px 60px 0; }
+    body footer div {
+      padding: 1em 1em; }
+      body footer div img {
+        padding-top: 0;
+        padding: 4.5em 0; }
+    body footer .footer-cus {
+      width: 40%; }
+  body nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 1.5em; }
+    body nav #coppy-right {
+      width: 50%; }
+      body nav #coppy-right h6 {
+        text-align: left; }
+    body nav #icon-bottom {
+      margin-right: 3em;
+      padding: 0; }
+      body nav #icon-bottom ul {
+        padding-left: 2em;
+        line-height: 6em; } }
+@media screen and (min-width: 1360px) {
+  body #background-1 {
+    background-size: 100%; }
+    body #background-1 #opacity #opacity-nav ul li .subcus {
+      left: 0em; }
+  body #client-logo ul {
+    width: 16.666%; }
+  body #slogan-2 {
+    background-size: 175%; }
+  body #tour div {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    body #tour div ul {
+      width: 50%; }
+      body #tour div ul img {
+        max-height: 200px; }
+    body #tour div .cus {
+      padding-bottom: 2em;
+      width: 50%; }
+  body #services .services-head {
+    padding-left: 3em; }
+  body #services .services-content {
+    width: 77%;
+    padding-left: 3em; }
+  body #newsUpdate {
+    display: inline-block;
+    clear: both; }
+    body #newsUpdate div {
+      width: 50%;
+      float: left;
+      margin: 0; }
+      body #newsUpdate div ul {
+        line-height: 2em;
+        float: left; }
+    body #newsUpdate .responsive-news {
+      padding-bottom: 1em; }
+      body #newsUpdate .responsive-news ul {
+        padding-left: 1em;
+        height: 200px;
+        width: 50%; } }
+#ui-datepicker-div .ui-datepicker-header {
+  background-color: #222;
+  border: none;
+  border-bottom: 1px solid #ffc926;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  #ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev {
+    width: 50%;
+    background-color: #222; }
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev .ui-icon {
+      font-weight: 100;
+      background-image: none; }
+      #ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev .ui-icon::before {
+        content: '\f053'; }
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev:hover {
+      background-color: #222;
+      border: none; }
+  #ui-datepicker-div .ui-datepicker-header .ui-datepicker-next {
+    width: 50%;
+    background-image: none;
+    background-color: #222;
+    text-align: right;
+    padding-right: 2em; }
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-next .ui-icon {
+      font-weight: 100;
+      background-image: none; }
+      #ui-datepicker-div .ui-datepicker-header .ui-datepicker-next .ui-icon::after {
+        content: '\f054'; }
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-next:hover {
+      background-color: #222;
+      border: none; }
+  #ui-datepicker-div .ui-datepicker-header .ui-datepicker-title {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #ffc926; }
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-title .ui-datepicker-month {
+      width: 50%;
+      text-align: center; }
+    #ui-datepicker-div .ui-datepicker-header .ui-datepicker-title .ui-datepicker-year {
+      width: 50%;
+      text-align: center; }
+#ui-datepicker-div .ui-datepicker-calendar {
+  width: 100%; }
+  #ui-datepicker-div .ui-datepicker-calendar tbody tr td {
+    text-align: center; }
+    #ui-datepicker-div .ui-datepicker-calendar tbody tr td a {
+      background-color: #222;
+      color: #FFF;
+      font-weight: 700;
+      -webkit-transition: .3s;
+      transition: .3s;
+      border: none; }
+      #ui-datepicker-div .ui-datepicker-calendar tbody tr td a:hover {
+        color: #ffc926;
+        border-bottom: 1px solid #ffc926; }
+/*# sourceMappingURL=index.css.map */

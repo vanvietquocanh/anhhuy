@@ -1,0 +1,75 @@
+@media screen and (min-width: 1360px) {
+	body{
+		#background-1{
+			background-size: 100%;
+			#opacity{
+				#opacity-nav{
+					ul{
+						li{
+							.subcus{
+								left: 0em; 
+							}
+						}
+					}
+				}
+			}
+		}
+		#client-logo{
+			ul{
+				width: 16.666%; 
+			}
+		}
+		#slogan-2{
+			background-size:175%;
+		}
+		#tour{
+			div{
+				width: 50%; 
+				display: flex;
+				flex-wrap: wrap;
+				ul{
+					width: 50%;
+					img{
+						max-height: 200px;
+					}
+				}
+				.cus{ 
+					padding-bottom: 2em; 
+					width: 50%;
+				}
+			}
+		}
+		#services{
+			.services-head{
+				padding-left: 3em;
+			}
+			.services-content{
+				width: 77%;
+				padding-left: 3em; 
+			}
+		}
+		#newsUpdate{
+			div{
+			width: 50%;
+			float: left;
+				margin: 0;
+				ul{
+					line-height: 2em; 
+					float: left;
+				}
+			}
+			display: inline-block;
+			.responsive-news{
+				padding-bottom: 1em;
+				ul{
+					padding-left: 1em; 
+					height: 200px;
+					width: 50%;
+					img{
+					}
+				}
+			}
+		clear: both;
+		}
+	}
+}
