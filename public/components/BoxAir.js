@@ -2,21 +2,26 @@ import React from "react";
 import API from 'qpx-express';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-
-
+import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
+import TwitterLogin from 'react-twitter-auth/lib/react-twitter-auth-component.js';
 import 'react-datepicker/dist/react-datepicker.css';
 import "./css/BoxAir.scss";
+
 
 
 export default class BoxAir extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
+			STTLog:this.props.STTLogin,
 			Scroll:"0",
 			width:"100%",
 			title:'WHERE WOULD YOU LIKE TO GO?',
 			DateIn: moment(),
 			Origin: '',
+			ClientEmail:'',
+			ClientName:'',
 			formSearch:'block',
 			formShowData:'none',
 			BTDP:"none",
@@ -102,6 +107,14 @@ export default class BoxAir extends React.Component{
 					  	}
 					}
 		var Trips = (x)=>{
+				if(x.data.carrier===undefined){
+					console.log('Đéo có')
+					this.setState({
+						Err:'Không tìm thấy chuyến bay!',
+						formSearch:'block',
+						formShowData:'none',
+					})
+				}
 				if(x){
 					this.setState({
 						Err:'',
@@ -158,6 +171,7 @@ export default class BoxAir extends React.Component{
 									}
 							}
 								let air = {
+											AirId:TripO[i].id,
 											AirCode:TripO[i].slice[0].segment[0].leg[0].aircraft,
 											Prince:price(sendprice),
 											ArriValTime:TripO[i].slice[0].segment[0].leg[0].arrivalTime,
@@ -168,7 +182,6 @@ export default class BoxAir extends React.Component{
 											MileAge:TripO[i].slice[0].segment[0].leg[0].mileage,
 											Time:TripO[i].slice[0].segment[0].duration,
 											FlightNumber:TripO[i].slice[0].segment[0].flight.number,
-											//Deadline:TripO[i].pricing,
 											Carrier:codeAir
 										}
 						this.state.TripsOp.push(air);
@@ -194,25 +207,6 @@ export default class BoxAir extends React.Component{
 			});
 
 	}
-	// componentWillMount(){
-	// 	FB.getLoginStatus(function(response) {
-	// 	    statusChangeCallback(response);
-	// 	    console.log(response);
-	// 	});
-	// }
-	// componentWillReceiveProps(nextProps){
-	// 		console.log(nextProps,"1")
-	// }
-	// shouldComponentUpdate(nextProps, nextState) {
-	// 	console.log(nextProps,nextState,"2")
-	// 	return true;
-	// }
-
-	// componentDidMount()
-	// {
-	// 	console.log(this,"3");
-	// }
-
 	DisplayInAdults()
 	{
 			this.setState
@@ -328,6 +322,10 @@ export default class BoxAir extends React.Component{
 			valueBudget:"",
 		})
 	}
+	Booking(e){
+		console.log('submit',e);
+		e.preventDefault();
+	}
 //
 	Close(){
 		this.setState
@@ -338,8 +336,90 @@ export default class BoxAir extends React.Component{
 			}
 		)
 	}
+//facebook
+	FBgetStatus(res){
+		if(res.status !== 'unknown'||res.status !== 'not_authorized'){
+			this.setState({
+				ClientName:res.name,
+				ClientEmail:res.email,
+			})
+		}
+	}
+//google
+	responseGoogle(res){
+		if(res.profileObj){
+			this.setState({
+				ClientName:res.profileObj.name,
+				ClientEmail:res.profileObj.email
+			})
+		}
+	}
+	resERR(res){
+		if(res){
+			this.setState({
+				ClientName:'',
+				ClientEmail:''
+			})
+		}
+	}
+//
+	onFailed(res){
+		console.log(res)
+	}
+	onSuccess(res){
+		console.log(res)
+	}
 //
 	render(){
+		var btLoginTwitter = (<TwitterLogin  
+						  	loginUrl="https://api.twitter.com/oauth2/token HTTP/1.1" 
+				            onFailure={this.onFailed.bind(this)} 
+				            onSuccess={this.onSuccess.bind(this)} 
+				            requestTokenUrl="https://api.twitter.com/oauth2/token HTTP/1.1"
+
+						/>
+						)
+		var btLoginGG = (<GoogleLogin
+							clientId = "1084277940261-dd4n0clo7hb83i2ksk2hrtpvv1pqksh0.apps.googleusercontent.com"
+						    buttonText = "Google"
+						    redirectUri="https://newtripsfake.herokuapp.com/"
+						    scope="https://www.googleapis.com/auth/userinfo.email"
+						    onSuccess = { this.responseGoogle.bind(this) }
+						    onFailure = { this.resERR.bind(this) }
+						/>);
+		var btLogFB = (<FacebookLogin
+							appId="114278719301911"
+						    autoLoad={false}
+						    reAuthenticate={true}
+						    fields="name,email,picture"
+						    callback={this.FBgetStatus.bind(this)}
+						/>);
+		var buttonBook;
+		var icon;
+		if(this.state.ClientName!==''){
+			icon = (<i className="fa fa-search"></i>);
+			buttonBook = (<button onClick={this.GetAPi.bind(this)} className="app-block-sm" type="submit" >BOOK NOW</button>)
+			btLogFB = '';
+			btLoginGG = '';
+		}else{
+			buttonBook = '';
+			icon = '';
+			btLogFB = (<FacebookLogin
+							appId="114278719301911"
+						    autoLoad={false}
+						    reAuthenticate={true}
+						    fields="name,email,picture"
+						    callback={this.FBgetStatus.bind(this)}
+						/>);
+			btLoginGG = (<GoogleLogin
+							clientId = "1084277940261-dd4n0clo7hb83i2ksk2hrtpvv1pqksh0.apps.googleusercontent.com"
+						    buttonText = "Google"
+						    redirectUri="https://newtripsfake.herokuapp.com/"
+						    scope="https://www.googleapis.com/auth/userinfo.email"
+						    onSuccess = { this.responseGoogle.bind(this) }
+						    onFailure = { this.resERR.bind(this) }
+						/>);
+		}
 		let Booking='';
 		let ListAir='';
 		if(this.state.TripsOp.length>=1){
@@ -363,15 +443,16 @@ export default class BoxAir extends React.Component{
 																<ul className="app-ajax-label-list app-ajax-label-list-sub">Mã MB: {x.AirCode}</ul>
 															</div>
 														</div>
-														<input className="app-ajax-picker" name="Trip" type="radio" key={i.toString()} value={x}/>
+														<input className="app-ajax-picker" name="Trip" type="radio" key={i.toString()} value={x.AirId}/>
 													</label>);
 			Booking = (<ul>
 							<button style={{display:this.state.BTDP}} type="reset" onClick={this.None.bind(this)} value="Research" className="app-ajax-sub app-ajax-search">Search</button>
-							<button style={{display:this.state.BTDP}} type="submit" value="Booking" className="app-ajax-sub"></button>
+							<button style={{display:this.state.BTDP}} onSubmit={this.Booking.bind(this)} type="submit" value="Booking" className="app-ajax-sub">Booking</button>
 					   </ul>);
 		}
 	return(
 			<div className="app">
+				<h1></h1>
 				<div className="app-content" style={{display:this.state.formSearch}}>
 					<h1 className="app-title" style={{width:this.state.width}}>{this.state.title}</h1>
 					<ul className="app-block">
@@ -399,12 +480,17 @@ export default class BoxAir extends React.Component{
 							</ul>
 						</div>
 					</ul>
-					<ul className="app-block">
-						<i className="fa fa-search"></i><button onClick={this.GetAPi.bind(this)} className="app-block-sm" type="submit">BOOK NOW</button>
+					<ul className="app-block button">
+						{icon}{buttonBook}
+						{btLogFB}
+						{btLoginGG}
+						{btLoginTwitter}
 					</ul>
 				</div>
 				<h1 className="app-Err">{this.state.Err}</h1><hr className="app-hr" style={{width:this.state.hr}}/>
 				<form className="app-ajax" style={{display:this.state.formShowData}}>
+					<input className="None" name='email' value={this.state.ClientEmail}/>
+					<input className="None" name='name' value={this.state.ClientName}/>
 					<section className="app-ajax-st">
 						{ListAir}
 					</section>
