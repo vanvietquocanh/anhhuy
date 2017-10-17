@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
-import TwitterLogin from 'react-twitter-auth/lib/react-twitter-auth-component.js';
+import TwitterLogin from 'react-twitter-auth';
 import 'react-datepicker/dist/react-datepicker.css';
 import "./css/BoxAir.scss";
 
@@ -343,6 +343,11 @@ export default class BoxAir extends React.Component{
 				ClientName:res.name,
 				ClientEmail:res.email,
 			})
+		}else{
+			this.setState({
+				ClientName:'',
+				ClientEmail:'',
+			})
 		}
 	}
 //google
@@ -371,14 +376,7 @@ export default class BoxAir extends React.Component{
 	}
 //
 	render(){
-		var btLoginTwitter = (<TwitterLogin  
-						  	loginUrl="https://api.twitter.com/oauth2/token HTTP/1.1" 
-				            onFailure={this.onFailed.bind(this)} 
-				            onSuccess={this.onSuccess.bind(this)} 
-				            requestTokenUrl="https://api.twitter.com/oauth2/token HTTP/1.1"
-
-						/>
-						)
+		var btLoginTwitter;
 		var btLoginGG = (<GoogleLogin
 							clientId = "1084277940261-dd4n0clo7hb83i2ksk2hrtpvv1pqksh0.apps.googleusercontent.com"
 						    buttonText = "Google"
@@ -396,7 +394,7 @@ export default class BoxAir extends React.Component{
 						/>);
 		var buttonBook;
 		var icon;
-		if(this.state.ClientName!==''){
+		if(this.state.ClientName.length>=1){
 			icon = (<i className="fa fa-search"></i>);
 			buttonBook = (<button onClick={this.GetAPi.bind(this)} className="app-block-sm" type="submit" >BOOK NOW</button>)
 			btLogFB = '';
@@ -488,7 +486,7 @@ export default class BoxAir extends React.Component{
 					</ul>
 				</div>
 				<h1 className="app-Err">{this.state.Err}</h1><hr className="app-hr" style={{width:this.state.hr}}/>
-				<form className="app-ajax" style={{display:this.state.formShowData}}>
+				<form action="/submit" method="post" acceptCharset="utf-8" className="app-ajax" style={{display:this.state.formShowData}}>
 					<input className="None" name='email' value={this.state.ClientEmail}/>
 					<input className="None" name='name' value={this.state.ClientName}/>
 					<section className="app-ajax-st">

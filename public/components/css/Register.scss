@@ -1,0 +1,67 @@
+.Reg{
+	font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+	&:hover,&:active{
+		background-color: #444;
+	}
+	&-form{
+		position: absolute;
+		width: 100%;
+		right: 0;
+		top:100%;
+		height: 100%;
+		z-index: 1000;
+		&-container{
+			position: relative;
+			width: 100%;
+			padding: 1em 0 0;
+			background:rgba(68, 68, 68, 0.95);
+			text-align: center;
+			.ErrAddress{
+				color: #FFF;
+				text-decoration: underline;
+			}
+			&-content{
+				color: red;
+ 				display: inline-table;
+				width: 100%; 
+				&-in{
+					width: 80%;
+					padding: 1em 2em;
+					border: none;
+					color: #fff; 
+					border-bottom: 1px solid #ffc926;
+					background:rgba(54, 56, 88, 0.6);
+				}
+			}
+			.sub-reg{
+				background:#ffc926;
+				text-decoration: underline;
+				font-size: 20px;
+				padding: 0.5em;
+				&:hover,&:active{
+					background: #fff;
+					color: #ffc926;
+					text-decoration: none; 
+				}
+			}
+		}
+	.last{
+		margin: 0 auto;
+		padding: 0 0 2em;
+		}
+	.recapt{
+		margin: 0 auto;
+		padding: 0 0 1em 0;
+		width: 304px; 
+		}
+	}
+}
+.my-facebook-button-class{
+	width: 15%;
+	color: #FFF;
+	background: #3B7CFF;
+	&:after{
+		content:"\f09a";
+	}
+}

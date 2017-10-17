@@ -3,6 +3,6 @@
 */
 export function CounterActions(){
 	return{
-		type: "Add"
+		type: "Login"
 	}
 }

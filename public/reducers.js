@@ -1,15 +1,11 @@
 const initialState = {
-	counter: 0
+    users:[],
 }
-function counterApp(state, action){
-	if(typeof state === "undefined"){
-		return initialState;
-	}
-	switch (action.type) {
-		case "Add":
-			return Object.assign({}, state, {counter: state.counter+1});
-		default:
-			return state;
-	}
+function Login(isLoginPending) {
+    return {
+        type: SET_LOGIN_PENDING,
+        isLoginPending
+    };
 }
-export default counterApp;
+ 
+export default Login;

@@ -1,6 +1,10 @@
-import {createStore} from "redux";
-import counterApp from "./reducers";
+import { applyMiddleware, createStore } from "redux";
+import axios from "axios";
+import logger from "redux-logger";
+import thunk from "redux-thunk";
+import LoginApp from "./reducers";
 
-let store = createStore(counterApp)
+const middleware = applyMiddleware();
+const store = createStore(LoginApp);
 
 export default store;

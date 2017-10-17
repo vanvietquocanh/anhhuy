@@ -698,7 +698,9 @@ body {
     body header #login {
       line-height: 2.3em; }
       body header #login #cus-3 {
-        border-left: 1px solid #444; }
+        border-left: 1px solid #444;
+        margin: auto;
+        height: 3.1em; }
   body #background-1 {
     background-size: 155%;
     text-outline: -380px; }
@@ -1027,4 +1029,11 @@ body {
       #ui-datepicker-div .ui-datepicker-calendar tbody tr td a:hover {
         color: #ffc926;
         border-bottom: 1px solid #ffc926; }
+.lognow{
+  width: 50%;
+  line-height: 3.1em;
+}
+.icons{
+  line-height: 3.1em;
+}
 /*# sourceMappingURL=index.css.map */
